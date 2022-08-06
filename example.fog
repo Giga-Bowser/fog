@@ -1,0 +1,26 @@
+i8 x = 5
+
+i8 isEven(i8 n) {
+    return !(n & 1)
+}
+
+i8 isOdd(i8 n) {
+    return n & 1
+}
+
+i8 collatz(i8 n) {
+    i8 i = 0
+    while n != 1 {
+        if isEven(n) {
+            n = n >> 1
+        } else {
+            n = 3 * n + 1
+        }
+        i = i + 1
+    }
+    return i
+}
+
+isEven(64)
+isOdd(x)
+collatz(27)
