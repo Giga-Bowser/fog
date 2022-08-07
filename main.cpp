@@ -21,7 +21,7 @@ int main(int, const char** argv) {
     fogParser parser(&tokens);
     tree::ParseTree* tree = parser.chunk();
 
-    std::cout << tree->toStringTree(&parser) << std::endl << std::endl;
+    std::cout << tree->toStringTree(&parser, true) << std::endl << std::endl;
 
     return 0;
 }

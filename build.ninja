@@ -6,7 +6,7 @@ ldflags = -L/usr/lib/
 cxxflags = -std=c++17 -I/usr/include/antlr4-runtime/ -I$antlrdir/
 
 rule antlr
-  command = antlr4 -Dlanguage=Cpp -o $antlrdir/ -no-listener $in
+  command = antlr4 -Dlanguage=Cpp -o $antlrdir/ -no-listener -visitor $in
 
 rule cxx
   command = $cxx $cxxflags -c $in -o $out

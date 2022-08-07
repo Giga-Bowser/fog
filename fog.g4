@@ -5,22 +5,22 @@ chunk: block EOF;
 block: stat* laststat?;
 
 stat:
-    ';'
-    | functioncall
+	functioncall
     | label
     | 'break'
     | 'goto' NAME
     | 'while' exp '{' block '}'
     | 'if' exp '{' block 
         ('} elseif' exp '{' block)* 
-        ('} else {' block)? '}'
+        ('} else {' block)? 
+		'}'
     | 'for' type NAME '=' exp ',' exp (',' exp)? '{' block '}'
-	| 'inline {' .*? '}'
+	| 'asm {' .*? '}'
     | (type | 'void') NAME funcbody
     | constant? type NAME '=' exp
     | NAME '=' exp;
 
-laststat: 'return' exp? | 'break' | 'continue' ';'?;
+laststat: 'return' exp? | 'break' | 'continue';
 
 label: 'label' NAME ':';
 
@@ -32,22 +32,19 @@ exp:
     'false'
     | 'true'
     | number
-	| prefixexp
-	| exp operatorOr exp
-	| exp operatorAnd exp
-    | exp operatorComparison exp
-	| exp operatorBitwise exp
-	| exp operatorAddSub exp
-	| exp operatorMul exp
-	| operatorUnary exp
+	| var
+	| functioncall
+	| exp operatorIncDec
 	| operatorIncDec exp
-	| exp operatorIncDec;
+	| operatorUnary exp
+	| exp operatorMul exp
+	| exp operatorAddSub exp
+	| exp operatorBitwise exp
+	| exp operatorComparison exp
+	| exp operatorAnd exp
+	| exp operatorOr exp;
 
-prefixexp: varOrExp | functioncall;
-
-functioncall: varOrExp args+;
-
-varOrExp: var | '(' exp ')';
+functioncall: var args+;
 
 var: (NAME | '(' exp ')' varSuffix) varSuffix*;
 
@@ -97,7 +94,7 @@ fragment BinDigit: '0' | '1';
 
 fragment SingleLineInputCharacter: ~[\r\n\u0085\u2028\u2029];
 
-COMMENT: '/*' .+? '*/' -> channel(HIDDEN);
+COMMENT: '/*' .*? '*/' -> channel(HIDDEN);
 
 LINE_COMMENT: '//' SingleLineInputCharacter* -> channel(HIDDEN);
 
