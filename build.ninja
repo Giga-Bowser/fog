@@ -1,0 +1,25 @@
+builddir = build
+antlrdir = antlr
+
+cxx = clang++
+ldflags = -L/usr/lib/
+cxxflags = -std=c++17 -I/usr/include/antlr4-runtime/ -I$antlrdir/
+
+rule antlr
+  command = antlr4 -Dlanguage=Cpp -o $antlrdir/ -no-listener $in
+
+rule cxx
+  command = $cxx $cxxflags -c $in -o $out
+
+rule link
+  command = $cxx $ldflags -o $out $in $libs
+
+build $antlrdir/fogLexer.interp $antlrdir/fogLexer.tokens $antlrdir/fogLexer.cpp $antlrdir/fogLexer.h $antlrdir/fogParser.cpp $antlrdir/fogParser.h $antlrdir/fog.interp $antlrdir/fog.tokens: antlr fog.g4
+
+build $builddir/fogLexer.o: cxx $antlrdir/fogLexer.cpp
+build $builddir/fogParser.o: cxx $antlrdir/fogParser.cpp
+
+build $builddir/main.o: cxx main.cpp
+
+build $builddir/fogp: link $builddir/main.o $builddir/fogLexer.o $builddir/fogListener.o $builddir/fogParser.o
+  libs = -lantlr4-runtime
