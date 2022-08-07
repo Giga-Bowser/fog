@@ -9,9 +9,9 @@ stat:
     | label
     | 'break'
     | 'goto' NAME
-    | 'while' exp '{' block '}'
-    | 'if' exp '{' block 
-        ('} elseif' exp '{' block)* 
+    | 'while' cond '{' block '}'
+    | 'if' cond '{' block 
+        ('} elseif' cond '{' block)* 
         ('} else {' block)? 
 		'}'
     | 'for' type NAME '=' exp ',' exp (',' exp)? '{' block '}'
@@ -24,14 +24,19 @@ laststat: 'return' exp? | 'break' | 'continue';
 
 label: 'label' NAME ':';
 
+cond: 
+	'false' 
+	| 'true'
+	| exp operatorComparison exp
+	| cond logicAnd cond
+	| cond logicOr cond;
+
 namelist: type NAME (',' type NAME)*;
 
 explist: (exp ',')* exp;
 
 exp:
-    'false'
-    | 'true'
-    | number
+    number
 	| var
 	| functioncall
 	| exp operatorIncDec
@@ -39,10 +44,7 @@ exp:
 	| operatorUnary exp
 	| exp operatorMul exp
 	| exp operatorAddSub exp
-	| exp operatorBitwise exp
-	| exp operatorComparison exp
-	| exp operatorAnd exp
-	| exp operatorOr exp;
+	| exp operatorBitwise exp;
 
 functioncall: var args+;
 
@@ -54,9 +56,9 @@ args: '(' explist? ')';
 
 funcbody: '(' namelist? ')' '{' block '}';
 
-operatorOr: 'or';
+logicOr: 'or';
 
-operatorAnd: 'and';
+logicAnd: 'and';
 
 operatorComparison: '<' | '>' | '<=' | '>=' | '!=' | '==';
 
