@@ -15,11 +15,10 @@ stat:
         ('} elseif' exp '{' block)* 
         ('} else {' block)? '}'
     | 'for' type NAME '=' exp ',' exp (',' exp)? '{' block '}'
-    | 'inline {' block '}'
+	| 'inline {' .*? '}'
     | (type | 'void') NAME funcbody
     | constant? type NAME '=' exp
-    | NAME '=' exp
-	| ('++' var) | (var '++');
+    | NAME '=' exp;
 
 laststat: 'return' exp? | 'break' | 'continue' ';'?;
 
@@ -33,14 +32,16 @@ exp:
     'false'
     | 'true'
     | number
-    | prefixexp
-    | operatorUnary exp
-    | exp operatorMul exp
-    | exp operatorAddSub exp
+	| prefixexp
+	| exp operatorOr exp
+	| exp operatorAnd exp
     | exp operatorComparison exp
-    | exp operatorAnd exp
-    | exp operatorOr exp
-    | exp operatorBitwise exp;
+	| exp operatorBitwise exp
+	| exp operatorAddSub exp
+	| exp operatorMul exp
+	| operatorUnary exp
+	| operatorIncDec exp
+	| exp operatorIncDec;
 
 prefixexp: varOrExp | functioncall;
 
@@ -70,6 +71,8 @@ operatorBitwise: '&' | '|' | '^' | '<<' | '>>';
 
 operatorUnary: '!' | '-' | '~';
 
+operatorIncDec: '++' | '--';
+
 number: INT | HEX | BINARY;
 
 type: 'i8' | 'i16' | 'i32' | 'byte' | 'short' | 'long';
@@ -84,11 +87,13 @@ INT: Digit+;
 
 HEX: '$' HexDigit+;
 
-BINARY: '%' [0-1]+;
+BINARY: '%' BinDigit+;
 
 fragment Digit: [0-9];
 
 fragment HexDigit: [0-9a-fA-F];
+
+fragment BinDigit: '0' | '1';
 
 fragment SingleLineInputCharacter: ~[\r\n\u0085\u2028\u2029];
 

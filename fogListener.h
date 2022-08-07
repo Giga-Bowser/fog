@@ -80,6 +80,9 @@ public:
   virtual void enterOperatorUnary(fogParser::OperatorUnaryContext *ctx) = 0;
   virtual void exitOperatorUnary(fogParser::OperatorUnaryContext *ctx) = 0;
 
+  virtual void enterOperatorIncDec(fogParser::OperatorIncDecContext *ctx) = 0;
+  virtual void exitOperatorIncDec(fogParser::OperatorIncDecContext *ctx) = 0;
+
   virtual void enterNumber(fogParser::NumberContext *ctx) = 0;
   virtual void exitNumber(fogParser::NumberContext *ctx) = 0;
 

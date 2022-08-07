@@ -19,7 +19,7 @@ int main(int, const char** argv) {
     CommonTokenStream tokens(&lexer);
 
     fogParser parser(&tokens);
-    tree::ParseTree* tree = parser.block();
+    tree::ParseTree* tree = parser.exp();
 
     std::cout << tree->toStringTree(&parser) << std::endl << std::endl;
 

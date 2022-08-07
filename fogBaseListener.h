@@ -82,6 +82,9 @@ public:
   virtual void enterOperatorUnary(fogParser::OperatorUnaryContext * /*ctx*/) override { }
   virtual void exitOperatorUnary(fogParser::OperatorUnaryContext * /*ctx*/) override { }
 
+  virtual void enterOperatorIncDec(fogParser::OperatorIncDecContext * /*ctx*/) override { }
+  virtual void exitOperatorIncDec(fogParser::OperatorIncDecContext * /*ctx*/) override { }
+
   virtual void enterNumber(fogParser::NumberContext * /*ctx*/) override { }
   virtual void exitNumber(fogParser::NumberContext * /*ctx*/) override { }
 

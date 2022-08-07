@@ -20,8 +20,8 @@ public:
     T__32 = 33, T__33 = 34, T__34 = 35, T__35 = 36, T__36 = 37, T__37 = 38, 
     T__38 = 39, T__39 = 40, T__40 = 41, T__41 = 42, T__42 = 43, T__43 = 44, 
     T__44 = 45, T__45 = 46, T__46 = 47, T__47 = 48, T__48 = 49, T__49 = 50, 
-    NAME = 51, INT = 52, HEX = 53, BINARY = 54, COMMENT = 55, LINE_COMMENT = 56, 
-    WS = 57
+    T__50 = 51, NAME = 52, INT = 53, HEX = 54, BINARY = 55, COMMENT = 56, 
+    LINE_COMMENT = 57, WS = 58
   };
 
   explicit fogLexer(antlr4::CharStream *input);

@@ -20,8 +20,8 @@ public:
     T__32 = 33, T__33 = 34, T__34 = 35, T__35 = 36, T__36 = 37, T__37 = 38, 
     T__38 = 39, T__39 = 40, T__40 = 41, T__41 = 42, T__42 = 43, T__43 = 44, 
     T__44 = 45, T__45 = 46, T__46 = 47, T__47 = 48, T__48 = 49, T__49 = 50, 
-    NAME = 51, INT = 52, HEX = 53, BINARY = 54, COMMENT = 55, LINE_COMMENT = 56, 
-    WS = 57
+    T__50 = 51, NAME = 52, INT = 53, HEX = 54, BINARY = 55, COMMENT = 56, 
+    LINE_COMMENT = 57, WS = 58
   };
 
   enum {
@@ -30,7 +30,8 @@ public:
     RuleVarOrExp = 10, RuleVar = 11, RuleVarSuffix = 12, RuleArgs = 13, 
     RuleFuncbody = 14, RuleOperatorOr = 15, RuleOperatorAnd = 16, RuleOperatorComparison = 17, 
     RuleOperatorAddSub = 18, RuleOperatorMul = 19, RuleOperatorBitwise = 20, 
-    RuleOperatorUnary = 21, RuleNumber = 22, RuleType = 23, RuleConstant = 24
+    RuleOperatorUnary = 21, RuleOperatorIncDec = 22, RuleNumber = 23, RuleType = 24, 
+    RuleConstant = 25
   };
 
   explicit fogParser(antlr4::TokenStream *input);
@@ -72,6 +73,7 @@ public:
   class OperatorMulContext;
   class OperatorBitwiseContext;
   class OperatorUnaryContext;
+  class OperatorIncDecContext;
   class NumberContext;
   class TypeContext;
   class ConstantContext; 
@@ -119,7 +121,6 @@ public:
     TypeContext *type();
     FuncbodyContext *funcbody();
     ConstantContext *constant();
-    VarContext *var();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -193,12 +194,13 @@ public:
     OperatorUnaryContext *operatorUnary();
     std::vector<ExpContext *> exp();
     ExpContext* exp(size_t i);
-    OperatorMulContext *operatorMul();
-    OperatorAddSubContext *operatorAddSub();
-    OperatorComparisonContext *operatorComparison();
-    OperatorAndContext *operatorAnd();
+    OperatorIncDecContext *operatorIncDec();
     OperatorOrContext *operatorOr();
+    OperatorAndContext *operatorAnd();
+    OperatorComparisonContext *operatorComparison();
     OperatorBitwiseContext *operatorBitwise();
+    OperatorAddSubContext *operatorAddSub();
+    OperatorMulContext *operatorMul();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -389,6 +391,18 @@ public:
   };
 
   OperatorUnaryContext* operatorUnary();
+
+  class  OperatorIncDecContext : public antlr4::ParserRuleContext {
+  public:
+    OperatorIncDecContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+   
+  };
+
+  OperatorIncDecContext* operatorIncDec();
 
   class  NumberContext : public antlr4::ParserRuleContext {
   public:

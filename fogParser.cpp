@@ -47,116 +47,118 @@ void fogParserInitialize() {
       "exp", "prefixexp", "functioncall", "varOrExp", "var", "varSuffix", 
       "args", "funcbody", "operatorOr", "operatorAnd", "operatorComparison", 
       "operatorAddSub", "operatorMul", "operatorBitwise", "operatorUnary", 
-      "number", "type", "constant"
+      "operatorIncDec", "number", "type", "constant"
     },
     std::vector<std::string>{
       "", "';'", "'break'", "'goto'", "'while'", "'{'", "'}'", "'if'", "'} elseif'", 
-      "'} else {'", "'for'", "'='", "','", "'inline {'", "'void'", "'++'", 
-      "'return'", "'continue'", "'label'", "':'", "'false'", "'true'", "'('", 
-      "')'", "'['", "']'", "'or'", "'and'", "'<'", "'>'", "'<='", "'>='", 
-      "'!='", "'=='", "'+'", "'-'", "'*'", "'&'", "'|'", "'^'", "'<<'", 
-      "'>>'", "'!'", "'~'", "'i8'", "'i16'", "'i32'", "'byte'", "'short'", 
-      "'long'", "'con'"
+      "'} else {'", "'for'", "'='", "','", "'inline {'", "'void'", "'return'", 
+      "'continue'", "'label'", "':'", "'false'", "'true'", "'('", "')'", 
+      "'['", "']'", "'or'", "'and'", "'<'", "'>'", "'<='", "'>='", "'!='", 
+      "'=='", "'+'", "'-'", "'*'", "'&'", "'|'", "'^'", "'<<'", "'>>'", 
+      "'!'", "'~'", "'++'", "'--'", "'i8'", "'i16'", "'i32'", "'byte'", 
+      "'short'", "'long'", "'con'"
     },
     std::vector<std::string>{
       "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
       "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
       "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
-      "NAME", "INT", "HEX", "BINARY", "COMMENT", "LINE_COMMENT", "WS"
+      "", "NAME", "INT", "HEX", "BINARY", "COMMENT", "LINE_COMMENT", "WS"
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,57,283,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+  	4,1,58,287,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
   	7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,
   	14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,
-  	21,2,22,7,22,2,23,7,23,2,24,7,24,1,0,1,0,1,0,1,1,5,1,55,8,1,10,1,12,1,
-  	58,9,1,1,1,3,1,61,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,
-  	1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,84,8,2,10,2,12,2,87,9,2,1,2,1,
-  	2,3,2,91,8,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,104,8,2,
-  	1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,116,8,2,1,2,1,2,1,2,3,2,121,
-  	8,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,136,8,2,1,
-  	3,1,3,3,3,140,8,3,1,3,1,3,1,3,3,3,145,8,3,3,3,147,8,3,1,4,1,4,1,4,1,4,
-  	1,5,1,5,1,5,1,5,1,5,1,5,5,5,159,8,5,10,5,12,5,162,9,5,1,6,1,6,1,6,5,6,
-  	167,8,6,10,6,12,6,170,9,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,3,7,
-  	182,8,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
-  	7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,5,7,208,8,7,10,7,12,7,211,9,7,1,8,1,
-  	8,3,8,215,8,8,1,9,1,9,4,9,219,8,9,11,9,12,9,220,1,10,1,10,1,10,1,10,1,
-  	10,3,10,228,8,10,1,11,1,11,1,11,1,11,1,11,1,11,3,11,236,8,11,1,11,5,11,
-  	239,8,11,10,11,12,11,242,9,11,1,12,1,12,1,12,1,12,1,13,1,13,3,13,250,
-  	8,13,1,13,1,13,1,14,1,14,3,14,256,8,14,1,14,1,14,1,14,1,14,1,14,1,15,
-  	1,15,1,16,1,16,1,17,1,17,1,18,1,18,1,19,1,19,1,20,1,20,1,21,1,21,1,22,
-  	1,22,1,23,1,23,1,24,1,24,1,24,0,1,14,25,0,2,4,6,8,10,12,14,16,18,20,22,
-  	24,26,28,30,32,34,36,38,40,42,44,46,48,0,6,1,0,28,33,1,0,34,35,1,0,37,
-  	41,2,0,35,35,42,43,1,0,52,54,1,0,44,49,300,0,50,1,0,0,0,2,56,1,0,0,0,
-  	4,135,1,0,0,0,6,146,1,0,0,0,8,148,1,0,0,0,10,152,1,0,0,0,12,168,1,0,0,
-  	0,14,181,1,0,0,0,16,214,1,0,0,0,18,216,1,0,0,0,20,227,1,0,0,0,22,235,
-  	1,0,0,0,24,243,1,0,0,0,26,247,1,0,0,0,28,253,1,0,0,0,30,262,1,0,0,0,32,
-  	264,1,0,0,0,34,266,1,0,0,0,36,268,1,0,0,0,38,270,1,0,0,0,40,272,1,0,0,
-  	0,42,274,1,0,0,0,44,276,1,0,0,0,46,278,1,0,0,0,48,280,1,0,0,0,50,51,3,
-  	2,1,0,51,52,5,0,0,1,52,1,1,0,0,0,53,55,3,4,2,0,54,53,1,0,0,0,55,58,1,
-  	0,0,0,56,54,1,0,0,0,56,57,1,0,0,0,57,60,1,0,0,0,58,56,1,0,0,0,59,61,3,
-  	6,3,0,60,59,1,0,0,0,60,61,1,0,0,0,61,3,1,0,0,0,62,136,5,1,0,0,63,136,
-  	3,18,9,0,64,136,3,8,4,0,65,136,5,2,0,0,66,67,5,3,0,0,67,136,5,51,0,0,
-  	68,69,5,4,0,0,69,70,3,14,7,0,70,71,5,5,0,0,71,72,3,2,1,0,72,73,5,6,0,
-  	0,73,136,1,0,0,0,74,75,5,7,0,0,75,76,3,14,7,0,76,77,5,5,0,0,77,85,3,2,
-  	1,0,78,79,5,8,0,0,79,80,3,14,7,0,80,81,5,5,0,0,81,82,3,2,1,0,82,84,1,
-  	0,0,0,83,78,1,0,0,0,84,87,1,0,0,0,85,83,1,0,0,0,85,86,1,0,0,0,86,90,1,
-  	0,0,0,87,85,1,0,0,0,88,89,5,9,0,0,89,91,3,2,1,0,90,88,1,0,0,0,90,91,1,
-  	0,0,0,91,92,1,0,0,0,92,93,5,6,0,0,93,136,1,0,0,0,94,95,5,10,0,0,95,96,
-  	3,46,23,0,96,97,5,51,0,0,97,98,5,11,0,0,98,99,3,14,7,0,99,100,5,12,0,
-  	0,100,103,3,14,7,0,101,102,5,12,0,0,102,104,3,14,7,0,103,101,1,0,0,0,
-  	103,104,1,0,0,0,104,105,1,0,0,0,105,106,5,5,0,0,106,107,3,2,1,0,107,108,
-  	5,6,0,0,108,136,1,0,0,0,109,110,5,13,0,0,110,111,3,2,1,0,111,112,5,6,
-  	0,0,112,136,1,0,0,0,113,116,3,46,23,0,114,116,5,14,0,0,115,113,1,0,0,
-  	0,115,114,1,0,0,0,116,117,1,0,0,0,117,118,5,51,0,0,118,136,3,28,14,0,
-  	119,121,3,48,24,0,120,119,1,0,0,0,120,121,1,0,0,0,121,122,1,0,0,0,122,
-  	123,3,46,23,0,123,124,5,51,0,0,124,125,5,11,0,0,125,126,3,14,7,0,126,
-  	136,1,0,0,0,127,128,5,51,0,0,128,129,5,11,0,0,129,136,3,14,7,0,130,131,
-  	5,15,0,0,131,136,3,22,11,0,132,133,3,22,11,0,133,134,5,15,0,0,134,136,
-  	1,0,0,0,135,62,1,0,0,0,135,63,1,0,0,0,135,64,1,0,0,0,135,65,1,0,0,0,135,
-  	66,1,0,0,0,135,68,1,0,0,0,135,74,1,0,0,0,135,94,1,0,0,0,135,109,1,0,0,
-  	0,135,115,1,0,0,0,135,120,1,0,0,0,135,127,1,0,0,0,135,130,1,0,0,0,135,
-  	132,1,0,0,0,136,5,1,0,0,0,137,139,5,16,0,0,138,140,3,14,7,0,139,138,1,
-  	0,0,0,139,140,1,0,0,0,140,147,1,0,0,0,141,147,5,2,0,0,142,144,5,17,0,
-  	0,143,145,5,1,0,0,144,143,1,0,0,0,144,145,1,0,0,0,145,147,1,0,0,0,146,
-  	137,1,0,0,0,146,141,1,0,0,0,146,142,1,0,0,0,147,7,1,0,0,0,148,149,5,18,
-  	0,0,149,150,5,51,0,0,150,151,5,19,0,0,151,9,1,0,0,0,152,153,3,46,23,0,
-  	153,160,5,51,0,0,154,155,5,12,0,0,155,156,3,46,23,0,156,157,5,51,0,0,
-  	157,159,1,0,0,0,158,154,1,0,0,0,159,162,1,0,0,0,160,158,1,0,0,0,160,161,
-  	1,0,0,0,161,11,1,0,0,0,162,160,1,0,0,0,163,164,3,14,7,0,164,165,5,12,
-  	0,0,165,167,1,0,0,0,166,163,1,0,0,0,167,170,1,0,0,0,168,166,1,0,0,0,168,
-  	169,1,0,0,0,169,171,1,0,0,0,170,168,1,0,0,0,171,172,3,14,7,0,172,13,1,
-  	0,0,0,173,174,6,7,-1,0,174,182,5,20,0,0,175,182,5,21,0,0,176,182,3,44,
-  	22,0,177,182,3,16,8,0,178,179,3,42,21,0,179,180,3,14,7,7,180,182,1,0,
-  	0,0,181,173,1,0,0,0,181,175,1,0,0,0,181,176,1,0,0,0,181,177,1,0,0,0,181,
-  	178,1,0,0,0,182,209,1,0,0,0,183,184,10,6,0,0,184,185,3,38,19,0,185,186,
-  	3,14,7,7,186,208,1,0,0,0,187,188,10,5,0,0,188,189,3,36,18,0,189,190,3,
-  	14,7,6,190,208,1,0,0,0,191,192,10,4,0,0,192,193,3,34,17,0,193,194,3,14,
-  	7,5,194,208,1,0,0,0,195,196,10,3,0,0,196,197,3,32,16,0,197,198,3,14,7,
-  	4,198,208,1,0,0,0,199,200,10,2,0,0,200,201,3,30,15,0,201,202,3,14,7,3,
-  	202,208,1,0,0,0,203,204,10,1,0,0,204,205,3,40,20,0,205,206,3,14,7,2,206,
-  	208,1,0,0,0,207,183,1,0,0,0,207,187,1,0,0,0,207,191,1,0,0,0,207,195,1,
-  	0,0,0,207,199,1,0,0,0,207,203,1,0,0,0,208,211,1,0,0,0,209,207,1,0,0,0,
-  	209,210,1,0,0,0,210,15,1,0,0,0,211,209,1,0,0,0,212,215,3,20,10,0,213,
-  	215,3,18,9,0,214,212,1,0,0,0,214,213,1,0,0,0,215,17,1,0,0,0,216,218,3,
-  	20,10,0,217,219,3,26,13,0,218,217,1,0,0,0,219,220,1,0,0,0,220,218,1,0,
-  	0,0,220,221,1,0,0,0,221,19,1,0,0,0,222,228,3,22,11,0,223,224,5,22,0,0,
-  	224,225,3,14,7,0,225,226,5,23,0,0,226,228,1,0,0,0,227,222,1,0,0,0,227,
-  	223,1,0,0,0,228,21,1,0,0,0,229,236,5,51,0,0,230,231,5,22,0,0,231,232,
-  	3,14,7,0,232,233,5,23,0,0,233,234,3,24,12,0,234,236,1,0,0,0,235,229,1,
-  	0,0,0,235,230,1,0,0,0,236,240,1,0,0,0,237,239,3,24,12,0,238,237,1,0,0,
-  	0,239,242,1,0,0,0,240,238,1,0,0,0,240,241,1,0,0,0,241,23,1,0,0,0,242,
-  	240,1,0,0,0,243,244,5,24,0,0,244,245,3,14,7,0,245,246,5,25,0,0,246,25,
-  	1,0,0,0,247,249,5,22,0,0,248,250,3,12,6,0,249,248,1,0,0,0,249,250,1,0,
-  	0,0,250,251,1,0,0,0,251,252,5,23,0,0,252,27,1,0,0,0,253,255,5,22,0,0,
-  	254,256,3,10,5,0,255,254,1,0,0,0,255,256,1,0,0,0,256,257,1,0,0,0,257,
-  	258,5,23,0,0,258,259,5,5,0,0,259,260,3,2,1,0,260,261,5,6,0,0,261,29,1,
-  	0,0,0,262,263,5,26,0,0,263,31,1,0,0,0,264,265,5,27,0,0,265,33,1,0,0,0,
-  	266,267,7,0,0,0,267,35,1,0,0,0,268,269,7,1,0,0,269,37,1,0,0,0,270,271,
-  	5,36,0,0,271,39,1,0,0,0,272,273,7,2,0,0,273,41,1,0,0,0,274,275,7,3,0,
-  	0,275,43,1,0,0,0,276,277,7,4,0,0,277,45,1,0,0,0,278,279,7,5,0,0,279,47,
-  	1,0,0,0,280,281,5,50,0,0,281,49,1,0,0,0,23,56,60,85,90,103,115,120,135,
-  	139,144,146,160,168,181,207,209,214,220,227,235,240,249,255
+  	21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,1,0,1,0,1,0,1,1,5,1,57,8,1,
+  	10,1,12,1,60,9,1,1,1,3,1,63,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,
+  	2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,86,8,2,10,2,12,2,89,
+  	9,2,1,2,1,2,3,2,93,8,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,
+  	2,106,8,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,118,8,2,1,2,1,2,
+  	1,2,3,2,123,8,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,133,8,2,1,3,1,3,3,
+  	3,137,8,3,1,3,1,3,1,3,3,3,142,8,3,3,3,144,8,3,1,4,1,4,1,4,1,4,1,5,1,5,
+  	1,5,1,5,1,5,1,5,5,5,156,8,5,10,5,12,5,159,9,5,1,6,1,6,1,6,5,6,164,8,6,
+  	10,6,12,6,167,9,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,
+  	3,7,182,8,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
+  	7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,5,7,210,8,7,10,7,12,7,213,
+  	9,7,1,8,1,8,3,8,217,8,8,1,9,1,9,4,9,221,8,9,11,9,12,9,222,1,10,1,10,1,
+  	10,1,10,1,10,3,10,230,8,10,1,11,1,11,1,11,1,11,1,11,1,11,3,11,238,8,11,
+  	1,11,5,11,241,8,11,10,11,12,11,244,9,11,1,12,1,12,1,12,1,12,1,13,1,13,
+  	3,13,252,8,13,1,13,1,13,1,14,1,14,3,14,258,8,14,1,14,1,14,1,14,1,14,1,
+  	14,1,15,1,15,1,16,1,16,1,17,1,17,1,18,1,18,1,19,1,19,1,20,1,20,1,21,1,
+  	21,1,22,1,22,1,23,1,23,1,24,1,24,1,25,1,25,1,25,0,1,14,26,0,2,4,6,8,10,
+  	12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,0,7,1,0,27,
+  	32,1,0,33,34,1,0,36,40,2,0,34,34,41,42,1,0,43,44,1,0,53,55,1,0,45,50,
+  	303,0,52,1,0,0,0,2,58,1,0,0,0,4,132,1,0,0,0,6,143,1,0,0,0,8,145,1,0,0,
+  	0,10,149,1,0,0,0,12,165,1,0,0,0,14,181,1,0,0,0,16,216,1,0,0,0,18,218,
+  	1,0,0,0,20,229,1,0,0,0,22,237,1,0,0,0,24,245,1,0,0,0,26,249,1,0,0,0,28,
+  	255,1,0,0,0,30,264,1,0,0,0,32,266,1,0,0,0,34,268,1,0,0,0,36,270,1,0,0,
+  	0,38,272,1,0,0,0,40,274,1,0,0,0,42,276,1,0,0,0,44,278,1,0,0,0,46,280,
+  	1,0,0,0,48,282,1,0,0,0,50,284,1,0,0,0,52,53,3,2,1,0,53,54,5,0,0,1,54,
+  	1,1,0,0,0,55,57,3,4,2,0,56,55,1,0,0,0,57,60,1,0,0,0,58,56,1,0,0,0,58,
+  	59,1,0,0,0,59,62,1,0,0,0,60,58,1,0,0,0,61,63,3,6,3,0,62,61,1,0,0,0,62,
+  	63,1,0,0,0,63,3,1,0,0,0,64,133,5,1,0,0,65,133,3,18,9,0,66,133,3,8,4,0,
+  	67,133,5,2,0,0,68,69,5,3,0,0,69,133,5,52,0,0,70,71,5,4,0,0,71,72,3,14,
+  	7,0,72,73,5,5,0,0,73,74,3,2,1,0,74,75,5,6,0,0,75,133,1,0,0,0,76,77,5,
+  	7,0,0,77,78,3,14,7,0,78,79,5,5,0,0,79,87,3,2,1,0,80,81,5,8,0,0,81,82,
+  	3,14,7,0,82,83,5,5,0,0,83,84,3,2,1,0,84,86,1,0,0,0,85,80,1,0,0,0,86,89,
+  	1,0,0,0,87,85,1,0,0,0,87,88,1,0,0,0,88,92,1,0,0,0,89,87,1,0,0,0,90,91,
+  	5,9,0,0,91,93,3,2,1,0,92,90,1,0,0,0,92,93,1,0,0,0,93,94,1,0,0,0,94,95,
+  	5,6,0,0,95,133,1,0,0,0,96,97,5,10,0,0,97,98,3,48,24,0,98,99,5,52,0,0,
+  	99,100,5,11,0,0,100,101,3,14,7,0,101,102,5,12,0,0,102,105,3,14,7,0,103,
+  	104,5,12,0,0,104,106,3,14,7,0,105,103,1,0,0,0,105,106,1,0,0,0,106,107,
+  	1,0,0,0,107,108,5,5,0,0,108,109,3,2,1,0,109,110,5,6,0,0,110,133,1,0,0,
+  	0,111,112,5,13,0,0,112,113,3,2,1,0,113,114,5,6,0,0,114,133,1,0,0,0,115,
+  	118,3,48,24,0,116,118,5,14,0,0,117,115,1,0,0,0,117,116,1,0,0,0,118,119,
+  	1,0,0,0,119,120,5,52,0,0,120,133,3,28,14,0,121,123,3,50,25,0,122,121,
+  	1,0,0,0,122,123,1,0,0,0,123,124,1,0,0,0,124,125,3,48,24,0,125,126,5,52,
+  	0,0,126,127,5,11,0,0,127,128,3,14,7,0,128,133,1,0,0,0,129,130,5,52,0,
+  	0,130,131,5,11,0,0,131,133,3,14,7,0,132,64,1,0,0,0,132,65,1,0,0,0,132,
+  	66,1,0,0,0,132,67,1,0,0,0,132,68,1,0,0,0,132,70,1,0,0,0,132,76,1,0,0,
+  	0,132,96,1,0,0,0,132,111,1,0,0,0,132,117,1,0,0,0,132,122,1,0,0,0,132,
+  	129,1,0,0,0,133,5,1,0,0,0,134,136,5,15,0,0,135,137,3,14,7,0,136,135,1,
+  	0,0,0,136,137,1,0,0,0,137,144,1,0,0,0,138,144,5,2,0,0,139,141,5,16,0,
+  	0,140,142,5,1,0,0,141,140,1,0,0,0,141,142,1,0,0,0,142,144,1,0,0,0,143,
+  	134,1,0,0,0,143,138,1,0,0,0,143,139,1,0,0,0,144,7,1,0,0,0,145,146,5,17,
+  	0,0,146,147,5,52,0,0,147,148,5,18,0,0,148,9,1,0,0,0,149,150,3,48,24,0,
+  	150,157,5,52,0,0,151,152,5,12,0,0,152,153,3,48,24,0,153,154,5,52,0,0,
+  	154,156,1,0,0,0,155,151,1,0,0,0,156,159,1,0,0,0,157,155,1,0,0,0,157,158,
+  	1,0,0,0,158,11,1,0,0,0,159,157,1,0,0,0,160,161,3,14,7,0,161,162,5,12,
+  	0,0,162,164,1,0,0,0,163,160,1,0,0,0,164,167,1,0,0,0,165,163,1,0,0,0,165,
+  	166,1,0,0,0,166,168,1,0,0,0,167,165,1,0,0,0,168,169,3,14,7,0,169,13,1,
+  	0,0,0,170,171,6,7,-1,0,171,182,5,19,0,0,172,182,5,20,0,0,173,182,3,46,
+  	23,0,174,182,3,16,8,0,175,176,3,42,21,0,176,177,3,14,7,3,177,182,1,0,
+  	0,0,178,179,3,44,22,0,179,180,3,14,7,2,180,182,1,0,0,0,181,170,1,0,0,
+  	0,181,172,1,0,0,0,181,173,1,0,0,0,181,174,1,0,0,0,181,175,1,0,0,0,181,
+  	178,1,0,0,0,182,211,1,0,0,0,183,184,10,9,0,0,184,185,3,30,15,0,185,186,
+  	3,14,7,10,186,210,1,0,0,0,187,188,10,8,0,0,188,189,3,32,16,0,189,190,
+  	3,14,7,9,190,210,1,0,0,0,191,192,10,7,0,0,192,193,3,34,17,0,193,194,3,
+  	14,7,8,194,210,1,0,0,0,195,196,10,6,0,0,196,197,3,40,20,0,197,198,3,14,
+  	7,7,198,210,1,0,0,0,199,200,10,5,0,0,200,201,3,36,18,0,201,202,3,14,7,
+  	6,202,210,1,0,0,0,203,204,10,4,0,0,204,205,3,38,19,0,205,206,3,14,7,5,
+  	206,210,1,0,0,0,207,208,10,1,0,0,208,210,3,44,22,0,209,183,1,0,0,0,209,
+  	187,1,0,0,0,209,191,1,0,0,0,209,195,1,0,0,0,209,199,1,0,0,0,209,203,1,
+  	0,0,0,209,207,1,0,0,0,210,213,1,0,0,0,211,209,1,0,0,0,211,212,1,0,0,0,
+  	212,15,1,0,0,0,213,211,1,0,0,0,214,217,3,20,10,0,215,217,3,18,9,0,216,
+  	214,1,0,0,0,216,215,1,0,0,0,217,17,1,0,0,0,218,220,3,20,10,0,219,221,
+  	3,26,13,0,220,219,1,0,0,0,221,222,1,0,0,0,222,220,1,0,0,0,222,223,1,0,
+  	0,0,223,19,1,0,0,0,224,230,3,22,11,0,225,226,5,21,0,0,226,227,3,14,7,
+  	0,227,228,5,22,0,0,228,230,1,0,0,0,229,224,1,0,0,0,229,225,1,0,0,0,230,
+  	21,1,0,0,0,231,238,5,52,0,0,232,233,5,21,0,0,233,234,3,14,7,0,234,235,
+  	5,22,0,0,235,236,3,24,12,0,236,238,1,0,0,0,237,231,1,0,0,0,237,232,1,
+  	0,0,0,238,242,1,0,0,0,239,241,3,24,12,0,240,239,1,0,0,0,241,244,1,0,0,
+  	0,242,240,1,0,0,0,242,243,1,0,0,0,243,23,1,0,0,0,244,242,1,0,0,0,245,
+  	246,5,23,0,0,246,247,3,14,7,0,247,248,5,24,0,0,248,25,1,0,0,0,249,251,
+  	5,21,0,0,250,252,3,12,6,0,251,250,1,0,0,0,251,252,1,0,0,0,252,253,1,0,
+  	0,0,253,254,5,22,0,0,254,27,1,0,0,0,255,257,5,21,0,0,256,258,3,10,5,0,
+  	257,256,1,0,0,0,257,258,1,0,0,0,258,259,1,0,0,0,259,260,5,22,0,0,260,
+  	261,5,5,0,0,261,262,3,2,1,0,262,263,5,6,0,0,263,29,1,0,0,0,264,265,5,
+  	25,0,0,265,31,1,0,0,0,266,267,5,26,0,0,267,33,1,0,0,0,268,269,7,0,0,0,
+  	269,35,1,0,0,0,270,271,7,1,0,0,271,37,1,0,0,0,272,273,5,35,0,0,273,39,
+  	1,0,0,0,274,275,7,2,0,0,275,41,1,0,0,0,276,277,7,3,0,0,277,43,1,0,0,0,
+  	278,279,7,4,0,0,279,45,1,0,0,0,280,281,7,5,0,0,281,47,1,0,0,0,282,283,
+  	7,6,0,0,283,49,1,0,0,0,284,285,5,51,0,0,285,51,1,0,0,0,23,58,62,87,92,
+  	105,117,122,132,136,141,143,157,165,181,209,211,216,222,229,237,242,251,
+  	257
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -249,9 +251,9 @@ fogParser::ChunkContext* fogParser::chunk() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(50);
+    setState(52);
     block();
-    setState(51);
+    setState(53);
     match(fogParser::EOF);
    
   }
@@ -314,27 +316,27 @@ fogParser::BlockContext* fogParser::block() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(56);
+    setState(58);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 0, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
-        setState(53);
+        setState(55);
         stat(); 
       }
-      setState(58);
+      setState(60);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 0, _ctx);
     }
-    setState(60);
+    setState(62);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & ((1ULL << fogParser::T__1)
-      | (1ULL << fogParser::T__15)
-      | (1ULL << fogParser::T__16))) != 0)) {
-      setState(59);
+      | (1ULL << fogParser::T__14)
+      | (1ULL << fogParser::T__15))) != 0)) {
+      setState(61);
       laststat();
     }
    
@@ -394,10 +396,6 @@ fogParser::ConstantContext* fogParser::StatContext::constant() {
   return getRuleContext<fogParser::ConstantContext>(0);
 }
 
-fogParser::VarContext* fogParser::StatContext::var() {
-  return getRuleContext<fogParser::VarContext>(0);
-}
-
 
 size_t fogParser::StatContext::getRuleIndex() const {
   return fogParser::RuleStat;
@@ -428,166 +426,166 @@ fogParser::StatContext* fogParser::stat() {
     exitRule();
   });
   try {
-    setState(135);
+    setState(132);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 7, _ctx)) {
     case 1: {
       enterOuterAlt(_localctx, 1);
-      setState(62);
+      setState(64);
       match(fogParser::T__0);
       break;
     }
 
     case 2: {
       enterOuterAlt(_localctx, 2);
-      setState(63);
+      setState(65);
       functioncall();
       break;
     }
 
     case 3: {
       enterOuterAlt(_localctx, 3);
-      setState(64);
+      setState(66);
       label();
       break;
     }
 
     case 4: {
       enterOuterAlt(_localctx, 4);
-      setState(65);
+      setState(67);
       match(fogParser::T__1);
       break;
     }
 
     case 5: {
       enterOuterAlt(_localctx, 5);
-      setState(66);
+      setState(68);
       match(fogParser::T__2);
-      setState(67);
+      setState(69);
       match(fogParser::NAME);
       break;
     }
 
     case 6: {
       enterOuterAlt(_localctx, 6);
-      setState(68);
-      match(fogParser::T__3);
-      setState(69);
-      exp(0);
       setState(70);
-      match(fogParser::T__4);
+      match(fogParser::T__3);
       setState(71);
-      block();
+      exp(0);
       setState(72);
+      match(fogParser::T__4);
+      setState(73);
+      block();
+      setState(74);
       match(fogParser::T__5);
       break;
     }
 
     case 7: {
       enterOuterAlt(_localctx, 7);
-      setState(74);
-      match(fogParser::T__6);
-      setState(75);
-      exp(0);
       setState(76);
-      match(fogParser::T__4);
+      match(fogParser::T__6);
       setState(77);
+      exp(0);
+      setState(78);
+      match(fogParser::T__4);
+      setState(79);
       block();
-      setState(85);
+      setState(87);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == fogParser::T__7) {
-        setState(78);
-        match(fogParser::T__7);
-        setState(79);
-        exp(0);
         setState(80);
-        match(fogParser::T__4);
+        match(fogParser::T__7);
         setState(81);
+        exp(0);
+        setState(82);
+        match(fogParser::T__4);
+        setState(83);
         block();
-        setState(87);
+        setState(89);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
-      setState(90);
+      setState(92);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
       if (_la == fogParser::T__8) {
-        setState(88);
+        setState(90);
         match(fogParser::T__8);
-        setState(89);
+        setState(91);
         block();
       }
-      setState(92);
+      setState(94);
       match(fogParser::T__5);
       break;
     }
 
     case 8: {
       enterOuterAlt(_localctx, 8);
-      setState(94);
-      match(fogParser::T__9);
-      setState(95);
-      type();
       setState(96);
-      match(fogParser::NAME);
+      match(fogParser::T__9);
       setState(97);
-      match(fogParser::T__10);
+      type();
       setState(98);
-      exp(0);
+      match(fogParser::NAME);
       setState(99);
-      match(fogParser::T__11);
+      match(fogParser::T__10);
       setState(100);
       exp(0);
-      setState(103);
+      setState(101);
+      match(fogParser::T__11);
+      setState(102);
+      exp(0);
+      setState(105);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
       if (_la == fogParser::T__11) {
-        setState(101);
+        setState(103);
         match(fogParser::T__11);
-        setState(102);
+        setState(104);
         exp(0);
       }
-      setState(105);
-      match(fogParser::T__4);
-      setState(106);
-      block();
       setState(107);
+      match(fogParser::T__4);
+      setState(108);
+      block();
+      setState(109);
       match(fogParser::T__5);
       break;
     }
 
     case 9: {
       enterOuterAlt(_localctx, 9);
-      setState(109);
-      match(fogParser::T__12);
-      setState(110);
-      block();
       setState(111);
+      match(fogParser::T__12);
+      setState(112);
+      block();
+      setState(113);
       match(fogParser::T__5);
       break;
     }
 
     case 10: {
       enterOuterAlt(_localctx, 10);
-      setState(115);
+      setState(117);
       _errHandler->sync(this);
       switch (_input->LA(1)) {
-        case fogParser::T__43:
         case fogParser::T__44:
         case fogParser::T__45:
         case fogParser::T__46:
         case fogParser::T__47:
-        case fogParser::T__48: {
-          setState(113);
+        case fogParser::T__48:
+        case fogParser::T__49: {
+          setState(115);
           type();
           break;
         }
 
         case fogParser::T__13: {
-          setState(114);
+          setState(116);
           match(fogParser::T__13);
           break;
         }
@@ -595,60 +593,42 @@ fogParser::StatContext* fogParser::stat() {
       default:
         throw NoViableAltException(this);
       }
-      setState(117);
+      setState(119);
       match(fogParser::NAME);
-      setState(118);
+      setState(120);
       funcbody();
       break;
     }
 
     case 11: {
       enterOuterAlt(_localctx, 11);
-      setState(120);
+      setState(122);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (_la == fogParser::T__49) {
-        setState(119);
+      if (_la == fogParser::T__50) {
+        setState(121);
         constant();
       }
-      setState(122);
-      type();
-      setState(123);
-      match(fogParser::NAME);
       setState(124);
-      match(fogParser::T__10);
+      type();
       setState(125);
+      match(fogParser::NAME);
+      setState(126);
+      match(fogParser::T__10);
+      setState(127);
       exp(0);
       break;
     }
 
     case 12: {
       enterOuterAlt(_localctx, 12);
-      setState(127);
-      match(fogParser::NAME);
-      setState(128);
-      match(fogParser::T__10);
       setState(129);
-      exp(0);
-      break;
-    }
-
-    case 13: {
-      enterOuterAlt(_localctx, 13);
+      match(fogParser::NAME);
       setState(130);
-      match(fogParser::T__14);
+      match(fogParser::T__10);
       setState(131);
-      var();
-      break;
-    }
-
-    case 14: {
-      enterOuterAlt(_localctx, 14);
-      setState(132);
-      var();
-      setState(133);
-      match(fogParser::T__14);
+      exp(0);
       break;
     }
 
@@ -706,29 +686,31 @@ fogParser::LaststatContext* fogParser::laststat() {
     exitRule();
   });
   try {
-    setState(146);
+    setState(143);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
-      case fogParser::T__15: {
+      case fogParser::T__14: {
         enterOuterAlt(_localctx, 1);
-        setState(137);
-        match(fogParser::T__15);
-        setState(139);
+        setState(134);
+        match(fogParser::T__14);
+        setState(136);
         _errHandler->sync(this);
 
         _la = _input->LA(1);
         if ((((_la & ~ 0x3fULL) == 0) &&
-          ((1ULL << _la) & ((1ULL << fogParser::T__19)
+          ((1ULL << _la) & ((1ULL << fogParser::T__18)
+          | (1ULL << fogParser::T__19)
           | (1ULL << fogParser::T__20)
-          | (1ULL << fogParser::T__21)
-          | (1ULL << fogParser::T__34)
+          | (1ULL << fogParser::T__33)
+          | (1ULL << fogParser::T__40)
           | (1ULL << fogParser::T__41)
           | (1ULL << fogParser::T__42)
+          | (1ULL << fogParser::T__43)
           | (1ULL << fogParser::NAME)
           | (1ULL << fogParser::INT)
           | (1ULL << fogParser::HEX)
           | (1ULL << fogParser::BINARY))) != 0)) {
-          setState(138);
+          setState(135);
           exp(0);
         }
         break;
@@ -736,21 +718,21 @@ fogParser::LaststatContext* fogParser::laststat() {
 
       case fogParser::T__1: {
         enterOuterAlt(_localctx, 2);
-        setState(141);
+        setState(138);
         match(fogParser::T__1);
         break;
       }
 
-      case fogParser::T__16: {
+      case fogParser::T__15: {
         enterOuterAlt(_localctx, 3);
-        setState(142);
-        match(fogParser::T__16);
-        setState(144);
+        setState(139);
+        match(fogParser::T__15);
+        setState(141);
         _errHandler->sync(this);
 
         _la = _input->LA(1);
         if (_la == fogParser::T__0) {
-          setState(143);
+          setState(140);
           match(fogParser::T__0);
         }
         break;
@@ -810,12 +792,12 @@ fogParser::LabelContext* fogParser::label() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(148);
-    match(fogParser::T__17);
-    setState(149);
+    setState(145);
+    match(fogParser::T__16);
+    setState(146);
     match(fogParser::NAME);
-    setState(150);
-    match(fogParser::T__18);
+    setState(147);
+    match(fogParser::T__17);
    
   }
   catch (RecognitionException &e) {
@@ -880,21 +862,21 @@ fogParser::NamelistContext* fogParser::namelist() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(152);
+    setState(149);
     type();
-    setState(153);
+    setState(150);
     match(fogParser::NAME);
-    setState(160);
+    setState(157);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while (_la == fogParser::T__11) {
-      setState(154);
+      setState(151);
       match(fogParser::T__11);
-      setState(155);
+      setState(152);
       type();
-      setState(156);
+      setState(153);
       match(fogParser::NAME);
-      setState(162);
+      setState(159);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
@@ -954,21 +936,21 @@ fogParser::ExplistContext* fogParser::explist() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(168);
+    setState(165);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 12, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
-        setState(163);
+        setState(160);
         exp(0);
-        setState(164);
+        setState(161);
         match(fogParser::T__11); 
       }
-      setState(170);
+      setState(167);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 12, _ctx);
     }
-    setState(171);
+    setState(168);
     exp(0);
    
   }
@@ -1007,28 +989,32 @@ fogParser::ExpContext* fogParser::ExpContext::exp(size_t i) {
   return getRuleContext<fogParser::ExpContext>(i);
 }
 
-fogParser::OperatorMulContext* fogParser::ExpContext::operatorMul() {
-  return getRuleContext<fogParser::OperatorMulContext>(0);
-}
-
-fogParser::OperatorAddSubContext* fogParser::ExpContext::operatorAddSub() {
-  return getRuleContext<fogParser::OperatorAddSubContext>(0);
-}
-
-fogParser::OperatorComparisonContext* fogParser::ExpContext::operatorComparison() {
-  return getRuleContext<fogParser::OperatorComparisonContext>(0);
-}
-
-fogParser::OperatorAndContext* fogParser::ExpContext::operatorAnd() {
-  return getRuleContext<fogParser::OperatorAndContext>(0);
+fogParser::OperatorIncDecContext* fogParser::ExpContext::operatorIncDec() {
+  return getRuleContext<fogParser::OperatorIncDecContext>(0);
 }
 
 fogParser::OperatorOrContext* fogParser::ExpContext::operatorOr() {
   return getRuleContext<fogParser::OperatorOrContext>(0);
 }
 
+fogParser::OperatorAndContext* fogParser::ExpContext::operatorAnd() {
+  return getRuleContext<fogParser::OperatorAndContext>(0);
+}
+
+fogParser::OperatorComparisonContext* fogParser::ExpContext::operatorComparison() {
+  return getRuleContext<fogParser::OperatorComparisonContext>(0);
+}
+
 fogParser::OperatorBitwiseContext* fogParser::ExpContext::operatorBitwise() {
   return getRuleContext<fogParser::OperatorBitwiseContext>(0);
+}
+
+fogParser::OperatorAddSubContext* fogParser::ExpContext::operatorAddSub() {
+  return getRuleContext<fogParser::OperatorAddSubContext>(0);
+}
+
+fogParser::OperatorMulContext* fogParser::ExpContext::operatorMul() {
+  return getRuleContext<fogParser::OperatorMulContext>(0);
 }
 
 
@@ -1077,40 +1063,49 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
     setState(181);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
-      case fogParser::T__19: {
-        setState(174);
-        match(fogParser::T__19);
+      case fogParser::T__18: {
+        setState(171);
+        match(fogParser::T__18);
         break;
       }
 
-      case fogParser::T__20: {
-        setState(175);
-        match(fogParser::T__20);
+      case fogParser::T__19: {
+        setState(172);
+        match(fogParser::T__19);
         break;
       }
 
       case fogParser::INT:
       case fogParser::HEX:
       case fogParser::BINARY: {
-        setState(176);
+        setState(173);
         number();
         break;
       }
 
-      case fogParser::T__21:
+      case fogParser::T__20:
       case fogParser::NAME: {
-        setState(177);
+        setState(174);
         prefixexp();
         break;
       }
 
-      case fogParser::T__34:
-      case fogParser::T__41:
-      case fogParser::T__42: {
-        setState(178);
+      case fogParser::T__33:
+      case fogParser::T__40:
+      case fogParser::T__41: {
+        setState(175);
         operatorUnary();
+        setState(176);
+        exp(3);
+        break;
+      }
+
+      case fogParser::T__42:
+      case fogParser::T__43: {
+        setState(178);
+        operatorIncDec();
         setState(179);
-        exp(7);
+        exp(2);
         break;
       }
 
@@ -1118,7 +1113,7 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
       throw NoViableAltException(this);
     }
     _ctx->stop = _input->LT(-1);
-    setState(209);
+    setState(211);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 15, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
@@ -1126,7 +1121,7 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
         if (!_parseListeners.empty())
           triggerExitRuleEvent();
         previousContext = _localctx;
-        setState(207);
+        setState(209);
         _errHandler->sync(this);
         switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 14, _ctx)) {
         case 1: {
@@ -1134,11 +1129,11 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(183);
 
-          if (!(precpred(_ctx, 6))) throw FailedPredicateException(this, "precpred(_ctx, 6)");
+          if (!(precpred(_ctx, 9))) throw FailedPredicateException(this, "precpred(_ctx, 9)");
           setState(184);
-          operatorMul();
+          operatorOr();
           setState(185);
-          exp(7);
+          exp(10);
           break;
         }
 
@@ -1147,11 +1142,11 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(187);
 
-          if (!(precpred(_ctx, 5))) throw FailedPredicateException(this, "precpred(_ctx, 5)");
+          if (!(precpred(_ctx, 8))) throw FailedPredicateException(this, "precpred(_ctx, 8)");
           setState(188);
-          operatorAddSub();
+          operatorAnd();
           setState(189);
-          exp(6);
+          exp(9);
           break;
         }
 
@@ -1160,11 +1155,11 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(191);
 
-          if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
+          if (!(precpred(_ctx, 7))) throw FailedPredicateException(this, "precpred(_ctx, 7)");
           setState(192);
           operatorComparison();
           setState(193);
-          exp(5);
+          exp(8);
           break;
         }
 
@@ -1173,11 +1168,11 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(195);
 
-          if (!(precpred(_ctx, 3))) throw FailedPredicateException(this, "precpred(_ctx, 3)");
+          if (!(precpred(_ctx, 6))) throw FailedPredicateException(this, "precpred(_ctx, 6)");
           setState(196);
-          operatorAnd();
+          operatorBitwise();
           setState(197);
-          exp(4);
+          exp(7);
           break;
         }
 
@@ -1186,11 +1181,11 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(199);
 
-          if (!(precpred(_ctx, 2))) throw FailedPredicateException(this, "precpred(_ctx, 2)");
+          if (!(precpred(_ctx, 5))) throw FailedPredicateException(this, "precpred(_ctx, 5)");
           setState(200);
-          operatorOr();
+          operatorAddSub();
           setState(201);
-          exp(3);
+          exp(6);
           break;
         }
 
@@ -1199,11 +1194,22 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           pushNewRecursionContext(_localctx, startState, RuleExp);
           setState(203);
 
-          if (!(precpred(_ctx, 1))) throw FailedPredicateException(this, "precpred(_ctx, 1)");
+          if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
           setState(204);
-          operatorBitwise();
+          operatorMul();
           setState(205);
-          exp(2);
+          exp(5);
+          break;
+        }
+
+        case 7: {
+          _localctx = _tracker.createInstance<ExpContext>(parentContext, parentState);
+          pushNewRecursionContext(_localctx, startState, RuleExp);
+          setState(207);
+
+          if (!(precpred(_ctx, 1))) throw FailedPredicateException(this, "precpred(_ctx, 1)");
+          setState(208);
+          operatorIncDec();
           break;
         }
 
@@ -1211,7 +1217,7 @@ fogParser::ExpContext* fogParser::exp(int precedence) {
           break;
         } 
       }
-      setState(211);
+      setState(213);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 15, _ctx);
     }
@@ -1267,19 +1273,19 @@ fogParser::PrefixexpContext* fogParser::prefixexp() {
     exitRule();
   });
   try {
-    setState(214);
+    setState(216);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 16, _ctx)) {
     case 1: {
       enterOuterAlt(_localctx, 1);
-      setState(212);
+      setState(214);
       varOrExp();
       break;
     }
 
     case 2: {
       enterOuterAlt(_localctx, 2);
-      setState(213);
+      setState(215);
       functioncall();
       break;
     }
@@ -1347,15 +1353,15 @@ fogParser::FunctioncallContext* fogParser::functioncall() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(216);
+    setState(218);
     varOrExp();
-    setState(218); 
+    setState(220); 
     _errHandler->sync(this);
     alt = 1;
     do {
       switch (alt) {
         case 1: {
-              setState(217);
+              setState(219);
               args();
               break;
             }
@@ -1363,7 +1369,7 @@ fogParser::FunctioncallContext* fogParser::functioncall() {
       default:
         throw NoViableAltException(this);
       }
-      setState(220); 
+      setState(222); 
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 17, _ctx);
     } while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER);
@@ -1421,24 +1427,24 @@ fogParser::VarOrExpContext* fogParser::varOrExp() {
     exitRule();
   });
   try {
-    setState(227);
+    setState(229);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 18, _ctx)) {
     case 1: {
       enterOuterAlt(_localctx, 1);
-      setState(222);
+      setState(224);
       var();
       break;
     }
 
     case 2: {
       enterOuterAlt(_localctx, 2);
-      setState(223);
-      match(fogParser::T__21);
-      setState(224);
-      exp(0);
       setState(225);
-      match(fogParser::T__22);
+      match(fogParser::T__20);
+      setState(226);
+      exp(0);
+      setState(227);
+      match(fogParser::T__21);
       break;
     }
 
@@ -1509,23 +1515,23 @@ fogParser::VarContext* fogParser::var() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(235);
+    setState(237);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case fogParser::NAME: {
-        setState(229);
+        setState(231);
         match(fogParser::NAME);
         break;
       }
 
-      case fogParser::T__21: {
-        setState(230);
-        match(fogParser::T__21);
-        setState(231);
-        exp(0);
+      case fogParser::T__20: {
         setState(232);
-        match(fogParser::T__22);
+        match(fogParser::T__20);
         setState(233);
+        exp(0);
+        setState(234);
+        match(fogParser::T__21);
+        setState(235);
         varSuffix();
         break;
       }
@@ -1533,15 +1539,15 @@ fogParser::VarContext* fogParser::var() {
     default:
       throw NoViableAltException(this);
     }
-    setState(240);
+    setState(242);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 20, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
-        setState(237);
+        setState(239);
         varSuffix(); 
       }
-      setState(242);
+      setState(244);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 20, _ctx);
     }
@@ -1596,12 +1602,12 @@ fogParser::VarSuffixContext* fogParser::varSuffix() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(243);
-    match(fogParser::T__23);
-    setState(244);
-    exp(0);
     setState(245);
-    match(fogParser::T__24);
+    match(fogParser::T__22);
+    setState(246);
+    exp(0);
+    setState(247);
+    match(fogParser::T__23);
    
   }
   catch (RecognitionException &e) {
@@ -1654,28 +1660,30 @@ fogParser::ArgsContext* fogParser::args() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(247);
-    match(fogParser::T__21);
     setState(249);
+    match(fogParser::T__20);
+    setState(251);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__19)
+      ((1ULL << _la) & ((1ULL << fogParser::T__18)
+      | (1ULL << fogParser::T__19)
       | (1ULL << fogParser::T__20)
-      | (1ULL << fogParser::T__21)
-      | (1ULL << fogParser::T__34)
+      | (1ULL << fogParser::T__33)
+      | (1ULL << fogParser::T__40)
       | (1ULL << fogParser::T__41)
       | (1ULL << fogParser::T__42)
+      | (1ULL << fogParser::T__43)
       | (1ULL << fogParser::NAME)
       | (1ULL << fogParser::INT)
       | (1ULL << fogParser::HEX)
       | (1ULL << fogParser::BINARY))) != 0)) {
-      setState(248);
+      setState(250);
       explist();
     }
-    setState(251);
-    match(fogParser::T__22);
+    setState(253);
+    match(fogParser::T__21);
    
   }
   catch (RecognitionException &e) {
@@ -1732,29 +1740,29 @@ fogParser::FuncbodyContext* fogParser::funcbody() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(253);
-    match(fogParser::T__21);
     setState(255);
+    match(fogParser::T__20);
+    setState(257);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__43)
-      | (1ULL << fogParser::T__44)
+      ((1ULL << _la) & ((1ULL << fogParser::T__44)
       | (1ULL << fogParser::T__45)
       | (1ULL << fogParser::T__46)
       | (1ULL << fogParser::T__47)
-      | (1ULL << fogParser::T__48))) != 0)) {
-      setState(254);
+      | (1ULL << fogParser::T__48)
+      | (1ULL << fogParser::T__49))) != 0)) {
+      setState(256);
       namelist();
     }
-    setState(257);
-    match(fogParser::T__22);
-    setState(258);
-    match(fogParser::T__4);
     setState(259);
-    block();
+    match(fogParser::T__21);
     setState(260);
+    match(fogParser::T__4);
+    setState(261);
+    block();
+    setState(262);
     match(fogParser::T__5);
    
   }
@@ -1803,8 +1811,8 @@ fogParser::OperatorOrContext* fogParser::operatorOr() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(262);
-    match(fogParser::T__25);
+    setState(264);
+    match(fogParser::T__24);
    
   }
   catch (RecognitionException &e) {
@@ -1852,8 +1860,8 @@ fogParser::OperatorAndContext* fogParser::operatorAnd() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(264);
-    match(fogParser::T__26);
+    setState(266);
+    match(fogParser::T__25);
    
   }
   catch (RecognitionException &e) {
@@ -1902,15 +1910,15 @@ fogParser::OperatorComparisonContext* fogParser::operatorComparison() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(266);
+    setState(268);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__27)
+      ((1ULL << _la) & ((1ULL << fogParser::T__26)
+      | (1ULL << fogParser::T__27)
       | (1ULL << fogParser::T__28)
       | (1ULL << fogParser::T__29)
       | (1ULL << fogParser::T__30)
-      | (1ULL << fogParser::T__31)
-      | (1ULL << fogParser::T__32))) != 0))) {
+      | (1ULL << fogParser::T__31))) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -1965,11 +1973,11 @@ fogParser::OperatorAddSubContext* fogParser::operatorAddSub() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(268);
+    setState(270);
     _la = _input->LA(1);
-    if (!(_la == fogParser::T__33
+    if (!(_la == fogParser::T__32
 
-    || _la == fogParser::T__34)) {
+    || _la == fogParser::T__33)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -2023,8 +2031,8 @@ fogParser::OperatorMulContext* fogParser::operatorMul() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(270);
-    match(fogParser::T__35);
+    setState(272);
+    match(fogParser::T__34);
    
   }
   catch (RecognitionException &e) {
@@ -2073,14 +2081,14 @@ fogParser::OperatorBitwiseContext* fogParser::operatorBitwise() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(272);
+    setState(274);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__36)
+      ((1ULL << _la) & ((1ULL << fogParser::T__35)
+      | (1ULL << fogParser::T__36)
       | (1ULL << fogParser::T__37)
       | (1ULL << fogParser::T__38)
-      | (1ULL << fogParser::T__39)
-      | (1ULL << fogParser::T__40))) != 0))) {
+      | (1ULL << fogParser::T__39))) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -2135,12 +2143,71 @@ fogParser::OperatorUnaryContext* fogParser::operatorUnary() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(274);
+    setState(276);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__34)
-      | (1ULL << fogParser::T__41)
-      | (1ULL << fogParser::T__42))) != 0))) {
+      ((1ULL << _la) & ((1ULL << fogParser::T__33)
+      | (1ULL << fogParser::T__40)
+      | (1ULL << fogParser::T__41))) != 0))) {
+    _errHandler->recoverInline(this);
+    }
+    else {
+      _errHandler->reportMatch(this);
+      consume();
+    }
+   
+  }
+  catch (RecognitionException &e) {
+    _errHandler->reportError(this, e);
+    _localctx->exception = std::current_exception();
+    _errHandler->recover(this, _localctx->exception);
+  }
+
+  return _localctx;
+}
+
+//----------------- OperatorIncDecContext ------------------------------------------------------------------
+
+fogParser::OperatorIncDecContext::OperatorIncDecContext(ParserRuleContext *parent, size_t invokingState)
+  : ParserRuleContext(parent, invokingState) {
+}
+
+
+size_t fogParser::OperatorIncDecContext::getRuleIndex() const {
+  return fogParser::RuleOperatorIncDec;
+}
+
+void fogParser::OperatorIncDecContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<fogListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterOperatorIncDec(this);
+}
+
+void fogParser::OperatorIncDecContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<fogListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitOperatorIncDec(this);
+}
+
+fogParser::OperatorIncDecContext* fogParser::operatorIncDec() {
+  OperatorIncDecContext *_localctx = _tracker.createInstance<OperatorIncDecContext>(_ctx, getState());
+  enterRule(_localctx, 44, fogParser::RuleOperatorIncDec);
+  size_t _la = 0;
+
+#if __cplusplus > 201703L
+  auto onExit = finally([=, this] {
+#else
+  auto onExit = finally([=] {
+#endif
+    exitRule();
+  });
+  try {
+    enterOuterAlt(_localctx, 1);
+    setState(278);
+    _la = _input->LA(1);
+    if (!(_la == fogParser::T__42
+
+    || _la == fogParser::T__43)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -2195,7 +2262,7 @@ void fogParser::NumberContext::exitRule(tree::ParseTreeListener *listener) {
 
 fogParser::NumberContext* fogParser::number() {
   NumberContext *_localctx = _tracker.createInstance<NumberContext>(_ctx, getState());
-  enterRule(_localctx, 44, fogParser::RuleNumber);
+  enterRule(_localctx, 46, fogParser::RuleNumber);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -2207,7 +2274,7 @@ fogParser::NumberContext* fogParser::number() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(276);
+    setState(280);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & ((1ULL << fogParser::INT)
@@ -2255,7 +2322,7 @@ void fogParser::TypeContext::exitRule(tree::ParseTreeListener *listener) {
 
 fogParser::TypeContext* fogParser::type() {
   TypeContext *_localctx = _tracker.createInstance<TypeContext>(_ctx, getState());
-  enterRule(_localctx, 46, fogParser::RuleType);
+  enterRule(_localctx, 48, fogParser::RuleType);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -2267,15 +2334,15 @@ fogParser::TypeContext* fogParser::type() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(278);
+    setState(282);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << fogParser::T__43)
-      | (1ULL << fogParser::T__44)
+      ((1ULL << _la) & ((1ULL << fogParser::T__44)
       | (1ULL << fogParser::T__45)
       | (1ULL << fogParser::T__46)
       | (1ULL << fogParser::T__47)
-      | (1ULL << fogParser::T__48))) != 0))) {
+      | (1ULL << fogParser::T__48)
+      | (1ULL << fogParser::T__49))) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -2318,7 +2385,7 @@ void fogParser::ConstantContext::exitRule(tree::ParseTreeListener *listener) {
 
 fogParser::ConstantContext* fogParser::constant() {
   ConstantContext *_localctx = _tracker.createInstance<ConstantContext>(_ctx, getState());
-  enterRule(_localctx, 48, fogParser::RuleConstant);
+  enterRule(_localctx, 50, fogParser::RuleConstant);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -2329,8 +2396,8 @@ fogParser::ConstantContext* fogParser::constant() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(280);
-    match(fogParser::T__49);
+    setState(284);
+    match(fogParser::T__50);
    
   }
   catch (RecognitionException &e) {
@@ -2354,12 +2421,13 @@ bool fogParser::sempred(RuleContext *context, size_t ruleIndex, size_t predicate
 
 bool fogParser::expSempred(ExpContext *_localctx, size_t predicateIndex) {
   switch (predicateIndex) {
-    case 0: return precpred(_ctx, 6);
-    case 1: return precpred(_ctx, 5);
-    case 2: return precpred(_ctx, 4);
-    case 3: return precpred(_ctx, 3);
-    case 4: return precpred(_ctx, 2);
-    case 5: return precpred(_ctx, 1);
+    case 0: return precpred(_ctx, 9);
+    case 1: return precpred(_ctx, 8);
+    case 2: return precpred(_ctx, 7);
+    case 3: return precpred(_ctx, 6);
+    case 4: return precpred(_ctx, 5);
+    case 5: return precpred(_ctx, 4);
+    case 6: return precpred(_ctx, 1);
 
   default:
     break;
